@@ -1,0 +1,17 @@
+{% extends "App1/padre.html" %}
+
+{% load static %}
+
+{{titulo}}
+
+{% block formulario %}
+
+<form action="" method="POST"> {% csrf_token %}
+
+    <p>¿Seguro deseas eliminar este comentario?</p>
+
+    <input type="submit" value="Aceptar">
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "App1/padre.html" %}
+
+{% load static %}
+
+{{titulo}}
+
+{% block formulario %}
+
+<p>Nombre: {{usuario.nombre}}</p>
+
+<button>
+    <a href="{% url 'listaIngredientes' %}"> Regresar </a>
+</button>
+
+{% endblock %}
+

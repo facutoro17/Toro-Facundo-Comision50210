@@ -1,0 +1,14 @@
+{% extends "App1/padre.html" %}
+
+{% load static %}
+
+{{titulo}}
+
+{% block formulario %}
+<form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+    {{formulario.as_p}}
+    <button type="submit">Agregar avatar</button>
+</form>
+
+{% endblock %}

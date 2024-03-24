@@ -1,0 +1,14 @@
+{% extends "App1/padre.html" %}
+
+{% load static %}
+
+{{titulo}}
+
+{% block formulario %}
+<form action="" method="POST">{% csrf_token %}
+
+    {{formulario.as_p}}
+    <button type="submit">Editar</button>
+</form>
+
+{% endblock %}

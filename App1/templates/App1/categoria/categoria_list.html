@@ -1,0 +1,23 @@
+{% extends "App1/padre.html" %}
+
+{% load static %}
+
+{{titulo}}
+
+{% block formulario %}
+
+{% for Categoria in object_list %}
+
+    <p>Nombre: {{Categoria.categoria}}</p>
+
+    
+    <a href="{% url 'detalleCategoria' Categoria.id %}"> Ver Categoria </a>
+    <a href="{% url 'editarCategoria' Categoria.id %}"> Editar Categoria </a>
+    <a href="{% url 'elminarCategoria' Categoria.id %}"> Elimnar Categoria </a>
+    
+    ---------------------------------------
+{% endfor %}
+
+<a href="{% url 'crearCategoria' %}"> Crear Categoria </a>
+
+{% endblock %}

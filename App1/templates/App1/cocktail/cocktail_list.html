@@ -1,0 +1,23 @@
+{% extends "App1/padre.html" %}
+
+{% load static %}
+
+{{titulo}}
+
+{% block formulario %}
+
+{% for Cocktail in object_list %}
+
+    <p>Nombre: {{Cocktail.nombre}}</p>
+
+    
+    <a href="{% url 'detalleCocteles' Cocteles.id %}"> Ver Cocteles </a>
+    <a href="{% url 'editarCocteles' Cocteles.id %}"> Editar Cocteles </a>
+    <a href="{% url 'elminarCocteles' Cocteles.id %}"> Elimnar Cocteles </a>
+    
+    ---------------------------------------
+{% endfor %}
+
+<a href="{% url 'crearCocteles' %}"> Crear Cocteles </a>
+
+{% endblock %}

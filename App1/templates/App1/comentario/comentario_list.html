@@ -1,0 +1,23 @@
+{% extends "App1/padre.html" %}
+
+{% load static %}
+
+{{titulo}}
+
+{% block formulario %}
+
+{% for Comentarios in object_list %}
+
+    <p>Nombre: {{Comentarios.cocktail}}</p>
+
+    
+    <a href="{% url 'detalleComentarios' Comentarios.id %}"> Ver comentarios </a>
+    <a href="{% url 'editarComentarios' Comentarios.id %}"> Editar comentarios </a>
+    <a href="{% url 'elminarComentarios' Comentarios.id %}"> Elimnar comentarios </a>
+    
+    ---------------------------------------
+{% endfor %}
+
+<a href="{% url 'crearComentarios' %}"> Crear comentario </a>
+
+{% endblock %}

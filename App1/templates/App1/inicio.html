@@ -1,0 +1,28 @@
+{% extends "App1/padre.html" %}
+
+{% load static %}
+
+{{titulo}}
+
+{% block botonSobreMi %}
+
+ <li class="nav-item"><a class="nav-link" href="#about">Sobre mi</a></li>
+
+{% endblock %}
+
+{% block sobreMi %}
+        <!-- About-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Un poco sobre mi:</h2>
+                        <hr class="divider divider-light" />
+                        <p class="text-white-75 mb-4">Mi nombre es Facundo Toro, vivo en la Ciudad de México,soy estudiante de la academia Coder House y este es mi proyecto final con el cual he creado una pagina web utilizando el lenguaje de Python, con el framework de Django. Espero disfruten mucho de mi página, para poder ingresar a todas las opciones y ver la listas que tenemos debes registrarte primero.</p>
+                        <a class="btn btn-light btn-xl" href="{% url 'Registrar' %}">Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}
+
